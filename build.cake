@@ -202,11 +202,11 @@ Task("PackFiles")
     NuGetPack(nuGetPackSettings);   
   });
    
-Task("Jenkins")
+//Task("Jenkins")
     //.IsDependentOn("DeployPackage")
-    .Does(() => {
-        Information("Done Building...");
-    });
+   // .Does(() => {
+    //    Information("Done Building...");
+   // });
 
 Task("JenkinsBuild")
     .IsDependentOn("CreateDockerImage")
@@ -222,9 +222,9 @@ Task("JenkinsBuild")
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
-    .IsDependentOn("DeployToTest");
-Task("Build")
-    .IsDependentOn("CreateDockerImage");
+    .IsDependentOn("JenkinsBuild");
+//Task("Build")
+ //   .IsDependentOn("CreateDockerImage");
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION
