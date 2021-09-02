@@ -203,7 +203,7 @@ Task("PackFiles")
   });
    
 Task("Jenkins")
-    .IsDependentOn("DeployPackage")
+    //.IsDependentOn("DeployPackage")
     .Does(() => {
         Information("Done Building...");
     });
@@ -222,7 +222,7 @@ Task("JenkinsBuild")
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
-   // .IsDependentOn("DeployToTest");
+    .IsDependentOn("DeployToTest");
 Task("Build")
     .IsDependentOn("CreateDockerImage");
 
