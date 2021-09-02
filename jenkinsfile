@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		powershell "& .\\build.ps1 -t JenkinsBuild"
+		powershell "& .\\build.ps1 -t Jenkins"
                 echo 'Build finished'
             }
         }
