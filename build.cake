@@ -23,7 +23,7 @@ var artifactsdir = Directory (artifacts);
 // Define config variables
 var appName = "DemoApp";
 var projectName = "DemoApp";
-//var projectPath = "GoRewardsBookingService";
+var projectPath = "DemoApp/DemoApp.sln";
 var registryUsername = EnvironmentVariable("REG_USER") ?? "sanjeevk13";
 var registryPassword = EnvironmentVariable("REG_PASSWORD") ?? "Vicky@di1331";
 var registryUrl = EnvironmentVariable("REG_URL") ?? "https://hub.docker.com/repository/docker/sanjeevk13/my-first-repo";
