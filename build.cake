@@ -222,7 +222,7 @@ Task("JenkinsBuild")
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
-    .IsDependentOn("DeployToTest");
+   // .IsDependentOn("DeployToTest");
 Task("Build")
     .IsDependentOn("CreateDockerImage");
 
